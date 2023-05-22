@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --theme: #F2F2F2;
+  --theme2:#dadada;
+  --text:#454545;
+  --text2:#B3B3B3;
+  --gradient: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+
+}
+
+.dark{
+  --theme: #0F0F0F;
+  --text:#484848;
+}
+
+body{
+background-color: var(--theme);
+}
+
+button{
+  border: none;
+  background: none;
+}
+
+
+
