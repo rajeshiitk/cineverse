@@ -5,9 +5,9 @@ const Carousel = ({heading , params}) => {
   return (
     <div>Carousel
     {heading}
-    {
+    {/* {
     params.map((index,para)=>(<div>{index}</div>))
-    }
+    } */}
     </div>
   )
 }

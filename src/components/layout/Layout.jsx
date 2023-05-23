@@ -9,7 +9,7 @@ import { Outlet } from 'react-router-dom';
 const Layout = () => {
     return (
         <Container >
-            <div className='layout'>
+            <div className='layout dark'>
                 <Sidebar />
                 <div>
                     <Header />
