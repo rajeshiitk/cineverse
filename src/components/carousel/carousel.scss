@@ -1,3 +1,5 @@
+@import '../../mixins.scss';
+
 .carousel {
     padding: 2rem 0 ;
     display: flex;
@@ -8,6 +10,8 @@
         display: flex;
         gap: 10px;
         overflow-y: hidden;
+
+       
         // margin-right: -20px;
         // margin-left: -20px;
         // padding: 0 20px;
@@ -43,6 +47,19 @@
                         height: 100%;
                         object-fit: cover;
                         object-position: center;
+                    }
+                }
+                .rating {
+                    width: 40px;
+                    height: 40px;
+                    position: relative;
+                    top: 30px;
+                    border-radius: 50%;
+                    background-color:var(--theme);
+                    flex-shrink: 0;
+                    @include md {
+                        width: 50px;
+                        height: 50px;
                     }
                 }
             }

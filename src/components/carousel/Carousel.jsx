@@ -1,11 +1,10 @@
 import React from 'react';
 import "./carousel.scss";
-import Card from './card/Card';
 import Img from '../../lazyLoad/Img';
 import { useSelector } from 'react-redux';
 import dayjs from 'dayjs';
-import { Navigate, useNavigate } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
+import Rating from '../rating/Rating';
 const Carousel = ({ data, loading, endpoint, }) => {
   const navigate = useNavigate();
   const { url } = useSelector((state) => (state.home));
@@ -36,11 +35,13 @@ const Carousel = ({ data, loading, endpoint, }) => {
                   >
                     <div className="posterBlock">
                       <Img src={poster} />
-                      {/* <CircleRating
+                      <div className="rating">
+                      <Rating
                         rating={item.vote_average.toFixed(
                           1
                         )}
-                      /> */}
+                      />
+                      </div>
                       {/* <Genres
                         data={item.genre_ids.slice(0, 2)}
                       /> */}
