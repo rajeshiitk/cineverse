@@ -9,9 +9,9 @@ import { Outlet } from 'react-router-dom';
 const Layout = () => {
     return (
         <Container >
-            <div className='layout dark'>
-                <Sidebar />
-                <div>
+            <div className='layout'>
+                <Sidebar  />
+                <div className='main' >
                     <Header />
                     <Outlet />
                 </div>

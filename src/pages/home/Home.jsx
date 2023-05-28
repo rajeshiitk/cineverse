@@ -3,6 +3,8 @@ import "./home.scss";
 import HeroBanner from './heroBanner/HeroBanner';
 import Carousel from '../../components/carousel/Carousel';
 import useFetch from '../../hooks/useFetch';
+import Container from '../../components/container/Container';
+import Trending from './trending/Trending';
 const Home = () => {
  
   // const { data, loading } = useFetch("/movie/upcoming");
@@ -13,9 +15,11 @@ const Home = () => {
 
   return (
     <>
-   <div>Home</div>
+    <div className='home'>
    <HeroBanner />
-   <Carousel heading={"Trending"} params={['Movies', 'TV']} />
+   <Trending />
+   {/* <Carousel heading={"Trending"} parameters={[{id: 1, name:'Movies'}, {id: 2, name:'TV'}]} /> */}
+   </div>
     
    </>
   )

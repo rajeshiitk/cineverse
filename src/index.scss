@@ -14,12 +14,19 @@
 }
 
 [data-theme=dark]{
+  --text-normal:black;
   --theme: #0F0F0F;
   --text:#484848;
 }
 
 body{
+  width: 100%;
+  min-height: 100vh;
 background-color: var(--theme);
+position: relative;
+// display: flex;
+// justify-content: center;
+scrollbar-width: thin;
 }
 
 button{

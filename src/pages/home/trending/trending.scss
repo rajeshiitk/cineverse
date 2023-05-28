@@ -1,0 +1,13 @@
+.trending{
+   width: 100%;
+    overflow-x: hidden;
+    padding: 1rem;
+    .top{
+        display: flex;
+        justify-content: space-between;
+
+        .carouselTitle{
+            font-size: x-large;
+        }
+    }
+}

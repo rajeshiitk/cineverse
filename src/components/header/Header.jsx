@@ -9,8 +9,8 @@ const Header = () => {
             <span className='searchIcon'>
                 <BsSearch />
                 </span>
-                <input type="text"  placeholder='Search for movies and  TV shows'/>
-                <button className='searchButton'>Search</button>
+                <input type="text"  placeholder='Search for movies'/>
+                {/* <button className='searchButton'>Search</button> */}
             </div>
             <div className="themeButton">
         <BsMoonStars />
