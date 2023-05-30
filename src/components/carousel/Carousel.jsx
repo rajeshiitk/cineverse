@@ -20,7 +20,7 @@ const Carousel = ({ data, loading, endpoint, }) => {
                 const poster = item.poster_path
                   ? url.poster + item.poster_path
                   : PosterFallback;
-                console.log(poster);
+                {/* console.log(poster); */}
 
                 return (
                   <div

@@ -2,6 +2,10 @@
    width: 100%;
     overflow-x: hidden;
     padding: 1rem;
+    
+::-webkit-scrollbar {
+    display: none;
+  }
     .top{
         display: flex;
         justify-content: space-between;

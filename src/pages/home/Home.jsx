@@ -5,6 +5,8 @@ import Carousel from '../../components/carousel/Carousel';
 import useFetch from '../../hooks/useFetch';
 import Container from '../../components/container/Container';
 import Trending from './trending/Trending';
+import Popular from './popular/Popular';
+import TopRated from './topRated/TopRated';
 const Home = () => {
  
   // const { data, loading } = useFetch("/movie/upcoming");
@@ -19,6 +21,8 @@ const Home = () => {
    <HeroBanner />
    <Trending />
    {/* <Carousel heading={"Trending"} parameters={[{id: 1, name:'Movies'}, {id: 2, name:'TV'}]} /> */}
+   <Popular />
+   <TopRated />
    </div>
     
    </>
