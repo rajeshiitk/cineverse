@@ -3,6 +3,12 @@ import './header.scss'
 import {BsMoonStars ,BsSearch } from "react-icons/bs"
 
 const Header = () => {
+   const bodyTag=  document.getElementById("theme");
+
+   const themeHandler = ()=> {
+    bodyTag.dataset.theme= ( bodyTag.dataset.theme === "dark" ? " " :"dark");
+   }
+    console.log(theme);
     return (
         <div className='header'>
             <div className='searchBar'>
@@ -12,7 +18,7 @@ const Header = () => {
                 <input type="text"  placeholder='Search for movies'/>
                 {/* <button className='searchButton'>Search</button> */}
             </div>
-            <div className="themeButton">
+            <div onClick={themeHandler} className="themeButton">
         <BsMoonStars />
             </div>
 

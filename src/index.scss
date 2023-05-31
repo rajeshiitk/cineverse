@@ -4,28 +4,37 @@
   box-sizing: border-box;
 }
 
+
 :root{
   --theme: #F2F2F2;
   --theme2:#dadada;
   --text:#454545;
   --text2:#B3B3B3;
+  --text-normal: rgb(0, 0, 0);
   --gradient: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
 
 }
 
 [data-theme=dark]{
-  --text-normal:black;
+  --text-normal:rgb(225, 225, 225);
   --theme: #0F0F0F;
-  --text:#484848;
+  --theme2:rgb(0, 0, 0);
+  --text:#d9d6d6;
+  --text2:rgb(227, 224, 224);
 }
 
 body{
   width: 100%;
+ 
   min-height: 100vh;
 background-color: var(--theme);
 position: relative;
 // display: flex;
 // justify-content: center;
+::-webkit-scrollbar{
+  // color: var(--text);
+  display: none;
+}
 }
 
 

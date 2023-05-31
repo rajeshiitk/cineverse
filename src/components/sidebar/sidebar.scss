@@ -12,6 +12,7 @@
     top: 0;
     left: 0;
     display: none;
+    color: var(--text-normal);
     
 
     @include md{
@@ -29,7 +30,7 @@
 
     .logo{
         position: sticky;
-        font-size:large ;
+        font-size:xx-large ;
         top: 0;
         left: 0;
         background-color:var(--theme);
@@ -44,7 +45,7 @@
         cursor: pointer;
 
         &:hover{
-            background: purple;
+            background: var(--gradient);
             color: white;
         }
     }

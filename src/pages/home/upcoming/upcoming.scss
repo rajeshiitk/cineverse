@@ -1,12 +1,11 @@
-.topRated{
+.upcoming{
     width: 100%;
      overflow-x: hidden;
      padding: 1rem 0;
-    
-::-webkit-scrollbar {
-    display: none;
-  }
      
+ ::-webkit-scrollbar {
+     display: none;
+   }
      .top{
          display: flex;
          justify-content: space-between;

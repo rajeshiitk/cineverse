@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 import  fetchDataFromApi from './utils/api.js'
 import { getApiConfiguration } from './store/homeSlice';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Details from './pages/details/Details';
 
 function App() {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ function App() {
       <Routes>
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
+        <Route path="/:mediaType/:id" element={<Details />} />
         <Route path='/search' element={<Search />} />
         </Route>
         <Route path='*' element={<h1>Sorry, Page not found</h1>} />
