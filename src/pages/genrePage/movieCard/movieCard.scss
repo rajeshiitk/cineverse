@@ -1,0 +1,20 @@
+.movieCard{
+    width: 125px;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    overflow: hidden;
+    color: var(--text-normal);
+    .poster{
+        width: 100%;
+        overflow: hidden;
+        border-radius: 1rem;
+
+
+        Img{
+            width: 100%;
+        }
+        
+    }
+}

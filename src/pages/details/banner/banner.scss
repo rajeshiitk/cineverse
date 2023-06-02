@@ -85,55 +85,78 @@
         // flex-direction: column;
         // align-items: center;
         gap: 0.3rem;
-        @include xs{
+
+        @include xs {
             flex-direction: row;
             gap: 2rem;
 
         }
-        .poster{
+
+        .poster {
             width: 40%;
             height: 50%;
             overflow: hidden;
             // object-fit: cover;
             border-radius: 1rem;
 
-            @include xs{
+            @include xs {
                 width: 30%;
                 height: 70%;
 
             }
 
-            Img{
+            Img {
                 width: 100%;
                 object-fit: cover;
                 border-radius: 1rem;
-               
+
             }
         }
-        .content{
+
+        .content {
             width: 65%;
             height: 80%;
 
-            .title{
+            .title {
                 font-size: small;
-                
+
             }
-        .overview {
-            padding: 1rem 0;
+
+            .overview {
+                padding: 1rem 0;
+                display: none;
+
+                @include md {
+                    font-size: x-large;
+                    display: block;
+                }
+
+            }
+
+            .genres {
+                display: flex;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+            }
+
+            .rating {
+                margin: 1rem;
+                width: 3rem;
+                opacity: 0.9;
+
+                @include md {
+                    width: 6rem;
+                }
+            }
+        }
+
+        .data{
             display: none;
-            
-            @include md {
-                font-size: x-large;
+
+            @include xs{
                 display: block;
+                margin-top: 2rem;
             }
-
-        }
-
-        .genres{
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
         }
     }
 }

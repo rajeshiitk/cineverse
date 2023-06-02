@@ -1,6 +1,6 @@
 import './App.css'
 import Home from './pages/home/Home';
-import Search from './pages/search/Search';
+import Search from './pages/searchPage/SearchPage';
 import Layout from './components/layout/Layout';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
@@ -9,6 +9,8 @@ import  fetchDataFromApi from './utils/api.js'
 import { getApiConfiguration } from './store/homeSlice';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Details from './pages/details/Details';
+import GenrePage from './pages/genrePage/GenrePage';
+import SearchPage from './pages/searchPage/SearchPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -41,6 +43,10 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/:mediaType/:id" element={<Details />} />
         <Route path='/search' element={<Search />} />
+        <Route path='/genre/:genreId' element={<GenrePage />} />
+        <Route path="/search/:query" element={<SearchPage />} />
+
+
         </Route>
         <Route path='*' element={<h1>Sorry, Page not found</h1>} />
       </Routes>

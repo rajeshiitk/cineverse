@@ -3,7 +3,7 @@ import "./genre.scss";
 
 const Genre = ({ genre}) => {
   return (
-    <div  className='genre'>
+    <div  className='genretag'>
         <p>{genre}</p>
     </div>
   )

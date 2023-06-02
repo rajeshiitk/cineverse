@@ -1,21 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './header.scss'
-import {BsMoonStars ,BsSearch } from "react-icons/bs"
+import {BsMoonStars ,BsSearch } from "react-icons/bs";
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const Header = () => {
-   const bodyTag=  document.getElementById("theme");
+    const [query ,setQuery] = useState("");
+    const navigate = useNavigate();
 
+   const bodyTag=  document.getElementById("theme");
+   console.log(query);
+   
    const themeHandler = ()=> {
     bodyTag.dataset.theme= ( bodyTag.dataset.theme === "dark" ? " " :"dark");
    }
-    console.log(theme);
+
+   const searchQueryHandler = (event) => {
+    if (event.key === "Enter" && query.length > 0) {
+        navigate(`/search/${query}`);
+    }
+};
+    // console.log(theme);
     return (
         <div className='header'>
             <div className='searchBar'>
             <span className='searchIcon'>
                 <BsSearch />
                 </span>
-                <input type="text"  placeholder='Search for movies'/>
+                <input  onChange={(e) => setQuery((e.target.value))} onKeyUp={searchQueryHandler} type="text"  placeholder='Search for movies'/>
                 {/* <button className='searchButton'>Search</button> */}
             </div>
             <div onClick={themeHandler} className="themeButton">

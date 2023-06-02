@@ -1,0 +1,10 @@
+@import "../../../mixins.scss";
+.mobileContent{
+    padding: 2rem 0 ;
+    color: var(--text-normal);
+    
+    @include md{
+        display: none;
+    }
+    
+}
