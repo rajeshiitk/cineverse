@@ -50,7 +50,7 @@ const SearchPage = () => {
 
 
   return (
-    <div className="searchPage">
+    <div id='scrollableDiv' className="searchPage">
       {!loading && (
         <div>
           {data?.results?.length > 0 ? (
@@ -65,8 +65,9 @@ const SearchPage = () => {
                 className="content"
                 dataLength={data?.results?.length || []}
                 next={fetchNextPageData}
-                hasMore={true || page <= data?.total_pages}
+                hasMore={page <= data?.total_pages}
                 loader={<h1>Loading</h1>}
+                scrollableTarget="scrollableDiv"
                 endMessage={
                   <p style={{ textAlign: 'center' }}>
                     <b>Yay! You have seen it all</b>

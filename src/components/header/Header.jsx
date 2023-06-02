@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './header.scss'
 import {BsMoonStars ,BsSearch } from "react-icons/bs";
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import logo from "../../assets/logo.png";
 
 const Header = () => {
     const [query ,setQuery] = useState("");
@@ -9,7 +10,7 @@ const Header = () => {
 
    const bodyTag=  document.getElementById("theme");
    console.log(query);
-   
+
    const themeHandler = ()=> {
     bodyTag.dataset.theme= ( bodyTag.dataset.theme === "dark" ? " " :"dark");
    }
@@ -22,6 +23,9 @@ const Header = () => {
     // console.log(theme);
     return (
         <div className='header'>
+        <div onClick={() =>{navigate("/")}} className="logoImg">
+            <img src={logo} alt="" />
+        </div>
             <div className='searchBar'>
             <span className='searchIcon'>
                 <BsSearch />
