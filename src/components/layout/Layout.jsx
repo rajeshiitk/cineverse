@@ -9,9 +9,9 @@ import { Outlet } from 'react-router-dom';
 const Layout = () => {
     return (
         <Container >
-            <div className='layout'>
+            <div  className='layout'>
                 <Sidebar  />
-                <div  className='main' >
+                <div  id='scrollableDiv'  className='main' >
                     <Header />
                     <Outlet />
                 </div>

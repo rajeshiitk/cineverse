@@ -50,7 +50,7 @@ const SearchPage = () => {
 
 
   return (
-    <div id='scrollableDiv' className="searchPage">
+    <div className="searchPage">
       {!loading && (
         <div>
           {data?.results?.length > 0 ? (

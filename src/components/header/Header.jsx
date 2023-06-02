@@ -9,7 +9,7 @@ const Header = () => {
     const navigate = useNavigate();
 
    const bodyTag=  document.getElementById("theme");
-   console.log(query);
+//    console.log(query);
 
    const themeHandler = ()=> {
     bodyTag.dataset.theme= ( bodyTag.dataset.theme === "dark" ? " " :"dark");
